@@ -2,7 +2,7 @@ import Benchmark from 'benchmark'
 
 export default function bench(targets) {
   const maxNameLengh = Math.max(...targets.map((target) => target.name.length))
-  const formattedTarget = targets.map((target) => {
+  const formattedTargets = targets.map((target) => {
     return {
       name: target.name.padEnd(maxNameLengh, ' '),
       func: target.func,
@@ -10,7 +10,7 @@ export default function bench(targets) {
   })
 
   const suite = new Benchmark.Suite()
-  formattedTarget
+  formattedTargets
     .reduce((acc, target) => acc.add(target.name, target.func), suite)
     .on('cycle', (event) => console.log(String(event.target)))
     .on('complete', function () {
