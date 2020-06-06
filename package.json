@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "benchmark": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "prettier": "^2.0.5"
+  }
+}
