@@ -15,6 +15,6 @@ function joinFunc() {
 }
 
 bench([
-  { name: 'plus', func: plusFunc },
+  { name: 'str += s', func: plusFunc },
   { name: 'join', func: joinFunc },
 ])

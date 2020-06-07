@@ -27,7 +27,7 @@ function plusFunc() {
 }
 
 bench([
-  { name: 'toString', func: toSringFunc },
   { name: 'String', func: sringFunc },
-  { name: 'plus', func: plusFunc },
+  { name: 'toString', func: toSringFunc },
+  { name: "'' + num", func: plusFunc },
 ])
